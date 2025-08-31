@@ -1,0 +1,39 @@
+# IDE配置
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# 编译输出
+target/
+build/
+out/
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.swp
+*~
+
+# Maven相关
+dependency-reduced-pom.xml
+
+# Java相关
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# 包管理
+node_modules/
+package-lock.json
+yarn.lock
