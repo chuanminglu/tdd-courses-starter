@@ -53,6 +53,7 @@
 ## 5. 核心技术点
 
 ### 基础技术
+
 - **JUnit 5 注解体系**：`@Test`, `@BeforeEach`, `@DisplayName`, `@Nested`
 - **断言库应用**：AssertJ的流畅API, JUnit的assertEquals/assertThrows
 - **异常处理机制**：自定义异常设计与测试
@@ -60,6 +61,7 @@
 - **并发编程**：synchronized关键字与线程安全
 
 ### Spring Boot技术
+
 - **依赖注入**：@Autowired, @Component, @Service, @Repository
 - **Web开发**：@RestController, @RequestMapping, @PathVariable
 - **数据持久化**：@Entity, @Repository, JPA查询方法
@@ -437,10 +439,10 @@ public class Account {
         synchronized (targetAccount) {
             BigDecimal originalSourceBalance = this.balance;
             BigDecimal originalTargetBalance = targetAccount.balance;
-      
+    
             this.balance = this.balance.subtract(transferAmount);
             targetAccount.balance = targetAccount.balance.add(transferAmount);
-      
+    
             // 记录操作日志
             logger.info(String.format(
                 "转账成功: %s -> %s, 金额: %s, 源余额: %s -> %s, 目标余额: %s -> %s",

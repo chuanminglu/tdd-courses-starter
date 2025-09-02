@@ -406,7 +406,7 @@ public class FlightBookingServiceImpl implements FlightBookingService {
                 .errorMessage(validation.getErrorMessage())
                 .build();
         }
-      
+    
         // 航班时间验证
         Flight flight = flightService.getFlightInfo(request.getFlightId());
         ValidationResult timeValidation = validateBookingTime(flight);
@@ -417,7 +417,7 @@ public class FlightBookingServiceImpl implements FlightBookingService {
                 .errorMessage(timeValidation.getErrorMessage())
                 .build();
         }
-      
+    
         // 预订成功
         return BookingResult.builder()
             .success(true)
@@ -431,12 +431,12 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (request.getPassengers() == null || request.getPassengers().isEmpty()) {
             return ValidationResult.invalid("MISSING_PASSENGERS", "至少需要一名乘客");
         }
-      
+    
         if (request.getPassengers().size() > MAX_PASSENGERS) {
             return ValidationResult.invalid("EXCEED_MAX_PASSENGERS", 
                 "最多只能预订" + MAX_PASSENGERS + "名乘客");
         }
-      
+    
         return ValidationResult.valid();
     }
   
@@ -444,14 +444,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (flight == null) {
             return ValidationResult.invalid("FLIGHT_NOT_FOUND", "航班不存在");
         }
-      
+    
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime cutoffTime = flight.getDepartureTime().minusHours(BOOKING_CUTOFF_HOURS);
-      
+    
         if (now.isAfter(cutoffTime)) {
             return ValidationResult.invalid("BOOKING_TOO_LATE", "起飞前2小时停止预订");
         }
-      
+    
         return ValidationResult.valid();
     }
 }
@@ -556,12 +556,12 @@ public class PassengerCountValidator implements BookingRequestValidator {
         if (request.getPassengers() == null || request.getPassengers().isEmpty()) {
             return ValidationResult.invalid("MISSING_PASSENGERS", "至少需要一名乘客");
         }
-      
+    
         if (request.getPassengers().size() > MAX_PASSENGERS) {
             return ValidationResult.invalid("EXCEED_MAX_PASSENGERS", 
                 "最多只能预订" + MAX_PASSENGERS + "名乘客");
         }
-      
+    
         return ValidationResult.valid();
     }
 }
@@ -586,14 +586,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (!validation.isValid()) {
             return createFailureResult(validation);
         }
-      
+    
         // 航班时间验证
         Flight flight = flightService.getFlightInfo(request.getFlightId());
         ValidationResult timeValidation = validateBookingTime(flight);
         if (!timeValidation.isValid()) {
             return createFailureResult(timeValidation);
         }
-      
+    
         // 预订成功
         return BookingResult.builder()
             .success(true)
@@ -615,14 +615,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (flight == null) {
             return ValidationResult.invalid("FLIGHT_NOT_FOUND", "航班不存在");
         }
-      
+    
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime cutoffTime = flight.getDepartureTime().minusHours(2);
-      
+    
         if (now.isAfter(cutoffTime)) {
             return ValidationResult.invalid("BOOKING_TOO_LATE", "起飞前2小时停止预订");
         }
-      
+    
         return ValidationResult.valid();
     }
 }
