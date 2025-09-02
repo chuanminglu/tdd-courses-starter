@@ -406,7 +406,7 @@ public class FlightBookingServiceImpl implements FlightBookingService {
                 .errorMessage(validation.getErrorMessage())
                 .build();
         }
-    
+  
         // 航班时间验证
         Flight flight = flightService.getFlightInfo(request.getFlightId());
         ValidationResult timeValidation = validateBookingTime(flight);
@@ -417,7 +417,7 @@ public class FlightBookingServiceImpl implements FlightBookingService {
                 .errorMessage(timeValidation.getErrorMessage())
                 .build();
         }
-    
+  
         // 预订成功
         return BookingResult.builder()
             .success(true)
@@ -431,12 +431,12 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (request.getPassengers() == null || request.getPassengers().isEmpty()) {
             return ValidationResult.invalid("MISSING_PASSENGERS", "至少需要一名乘客");
         }
-    
+  
         if (request.getPassengers().size() > MAX_PASSENGERS) {
             return ValidationResult.invalid("EXCEED_MAX_PASSENGERS", 
                 "最多只能预订" + MAX_PASSENGERS + "名乘客");
         }
-    
+  
         return ValidationResult.valid();
     }
   
@@ -444,14 +444,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (flight == null) {
             return ValidationResult.invalid("FLIGHT_NOT_FOUND", "航班不存在");
         }
-    
+  
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime cutoffTime = flight.getDepartureTime().minusHours(BOOKING_CUTOFF_HOURS);
-    
+  
         if (now.isAfter(cutoffTime)) {
             return ValidationResult.invalid("BOOKING_TOO_LATE", "起飞前2小时停止预订");
         }
-    
+  
         return ValidationResult.valid();
     }
 }
@@ -556,12 +556,12 @@ public class PassengerCountValidator implements BookingRequestValidator {
         if (request.getPassengers() == null || request.getPassengers().isEmpty()) {
             return ValidationResult.invalid("MISSING_PASSENGERS", "至少需要一名乘客");
         }
-    
+  
         if (request.getPassengers().size() > MAX_PASSENGERS) {
             return ValidationResult.invalid("EXCEED_MAX_PASSENGERS", 
                 "最多只能预订" + MAX_PASSENGERS + "名乘客");
         }
-    
+  
         return ValidationResult.valid();
     }
 }
@@ -586,14 +586,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (!validation.isValid()) {
             return createFailureResult(validation);
         }
-    
+  
         // 航班时间验证
         Flight flight = flightService.getFlightInfo(request.getFlightId());
         ValidationResult timeValidation = validateBookingTime(flight);
         if (!timeValidation.isValid()) {
             return createFailureResult(timeValidation);
         }
-    
+  
         // 预订成功
         return BookingResult.builder()
             .success(true)
@@ -615,14 +615,14 @@ public class FlightBookingServiceImpl implements FlightBookingService {
         if (flight == null) {
             return ValidationResult.invalid("FLIGHT_NOT_FOUND", "航班不存在");
         }
-    
+  
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime cutoffTime = flight.getDepartureTime().minusHours(2);
-    
+  
         if (now.isAfter(cutoffTime)) {
             return ValidationResult.invalid("BOOKING_TOO_LATE", "起飞前2小时停止预订");
         }
-    
+  
         return ValidationResult.valid();
     }
 }
@@ -646,25 +646,7 @@ public class FlightBookingServiceImpl implements FlightBookingService {
 - [ ] 能够让AI生成实现代码
 - [ ] 能够让AI提供重构建议
 
-#### ✅ 业务理解
-
-- [ ] 理解航班预订基本业务流程
-- [ ] 掌握输入验证的重要性
-- [ ] 理解业务规则的实现方式
-- [ ] 掌握错误处理基本方式
-
-### AI工具使用效果统计
-
-| 开发环节       | 传统开发耗时      | AI辅助耗时       | 效率提升      |
-| -------------- | ----------------- | ---------------- | ------------- |
-| 测试用例设计   | 25分钟            | 8分钟            | 68%           |
-| 接口定义       | 15分钟            | 5分钟            | 67%           |
-| 最小实现       | 20分钟            | 7分钟            | 65%           |
-| 业务逻辑完善   | 30分钟            | 12分钟           | 60%           |
-| 重构优化       | 20分钟            | 8分钟            | 60%           |
-| **总计** | **110分钟** | **40分钟** | **64%** |
-
-### 关键收获总结
+### 键收获总结
 
 1. **TDD思维转换**：从"先写代码后写测试"转变为"测试驱动设计"
 2. **AI赋能效果**：大幅提升开发效率，减少思考时间
@@ -718,7 +700,3 @@ public class FlightBookingServiceImpl implements FlightBookingService {
 2. 优化错误处理机制
 3. 改善代码可读性
 4. 添加适当的日志记录
-
----
-
-**演练完成标志：基础预订功能完整实现，所有测试通过，代码清晰易懂** ✅

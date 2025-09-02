@@ -11,8 +11,6 @@
 - 学会利用AI生成高质量的测试用例
 - 体验AI在代码重构中的价值
 - 掌握Java单元测试框架JUnit的基本使用
-- 学习BigDecimal在金融业务中的应用
-- 理解线程安全和并发编程的基本概念
 - 培养代码质量意识和重构思维
 
 **技术栈**：
@@ -439,10 +437,10 @@ public class Account {
         synchronized (targetAccount) {
             BigDecimal originalSourceBalance = this.balance;
             BigDecimal originalTargetBalance = targetAccount.balance;
-    
+  
             this.balance = this.balance.subtract(transferAmount);
             targetAccount.balance = targetAccount.balance.add(transferAmount);
-    
+  
             // 记录操作日志
             logger.info(String.format(
                 "转账成功: %s -> %s, 金额: %s, 源余额: %s -> %s, 目标余额: %s -> %s",
