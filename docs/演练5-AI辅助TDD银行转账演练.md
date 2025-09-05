@@ -67,8 +67,6 @@
 - **配置管理**：application.yml, @ConfigurationProperties
 - **Maven配置**：插件配置与依赖管理
 
-**时间安排**：30-40分钟
-
 ---
 
 ## 业务需求
