@@ -1,0 +1,51 @@
+event_id,user_id,book_id,book_title,category,event_type,page_url,duration_seconds,timestamp,device_type,source
+evt_001,usr_10523,book_3421,深入理解Java虚拟机（第3版）,Java,page_view,/book/3421,127,2024-11-01 09:23:15,mobile,search
+evt_002,usr_10523,book_3421,深入理解Java虚拟机（第3版）,Java,click_detail,/book/3421,0,2024-11-01 09:25:22,mobile,search
+evt_003,usr_10523,book_5678,Redis设计与实现,数据库,page_view,/book/5678,85,2024-11-01 09:30:45,mobile,recommendation
+evt_004,usr_18294,book_8901,Python编程：从入门到实践（第2版）,Python,page_view,/book/8901,234,2024-11-01 10:15:33,desktop,homepage
+evt_005,usr_18294,book_8901,Python编程：从入门到实践（第2版）,Python,add_to_cart,/book/8901,0,2024-11-01 10:19:27,desktop,homepage
+evt_006,usr_18294,book_2345,算法导论（第3版）,算法,page_view,/book/2345,156,2024-11-01 10:22:10,desktop,category_browse
+evt_007,usr_25637,book_7890,Spring Boot实战,Java,page_view,/book/7890,,2024-11-01 11:05:42,mobile,search
+evt_008,usr_25637,book_7890,Spring Boot实战,Java,click_detail,/book/7890,0,2024-11-01 11:06:15,mobile,search
+evt_009,usr_25637,book_4567,Kubernetes权威指南,云计算,page_view,/book/4567,93,2024-11-01 11:10:28,mobile,recommendation
+evt_010,usr_33421,book_1234,代码大全（第2版）,软件工程,page_view,/book/1234,298,2024-11-01 14:20:17,desktop,homepage
+evt_011,usr_33421,book_1234,代码大全（第2版）,软件工程,add_to_cart,/book/1234,0,2024-11-01 14:25:15,desktop,homepage
+evt_012,usr_33421,book_1234,代码大全（第2版）,软件工程,purchase,/checkout,0,2024-11-01 14:28:42,desktop,homepage
+evt_013,usr_42156,book_6789,MySQL必知必会,数据库,page_view,/book/6789,67,2024-11-01 15:33:21,mobile,search
+evt_014,usr_42156,book_3421,深入理解Java虚拟机（第3版）,Java,page_view,/book/3421,189,2024-11-01 15:38:45,mobile,recommendation
+evt_015,usr_42156,book_3421,深入理解Java虚拟机（第3版）,Java,add_to_cart,/book/3421,0,2024-11-01 15:41:54,mobile,recommendation
+evt_016,usr_10523,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,page_view,/book/9012,143,2024-11-02 08:15:27,desktop,category_browse
+evt_017,usr_10523,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,click_detail,/book/9012,0,2024-11-02 08:17:50,desktop,category_browse
+evt_018,usr_55234,book_3456,设计模式：可复用面向对象软件的基础,软件工程,page_view,/book/3456,,2024-11-02 09:42:13,mobile,search
+evt_019,usr_55234,book_8901,Python编程：从入门到实践（第2版）,Python,page_view,/book/8901,201,2024-11-02 09:50:28,mobile,recommendation
+evt_020,usr_55234,book_8901,Python编程：从入门到实践（第2版）,Python,add_to_cart,/book/8901,0,2024-11-02 09:53:49,mobile,recommendation
+evt_021,usr_18294,book_7890,Spring Boot实战,Java,page_view,/book/7890,112,2024-11-02 11:25:36,desktop,search
+evt_022,usr_18294,book_5678,Redis设计与实现,数据库,page_view,/book/5678,178,2024-11-02 11:30:15,desktop,recommendation
+evt_023,usr_18294,book_5678,Redis设计与实现,数据库,purchase,/checkout,0,2024-11-02 11:35:42,desktop,recommendation
+evt_024,usr_67890,book_2345,算法导论（第3版）,算法,page_view,/book/2345,256,2024-11-02 13:18:54,desktop,homepage
+evt_025,usr_67890,book_2345,算法导论（第3版）,算法,add_to_cart,/book/2345,0,2024-11-02 13:23:10,desktop,homepage
+evt_026,usr_25637,book_3421,深入理解Java虚拟机（第3版）,Java,page_view,/book/3421,94,2024-11-02 14:45:22,mobile,category_browse
+evt_027,usr_25637,book_1234,代码大全（第2版）,软件工程,page_view,/book/1234,,2024-11-02 14:52:37,mobile,recommendation
+evt_028,usr_33421,book_6789,MySQL必知必会,数据库,page_view,/book/6789,167,2024-11-03 09:10:45,desktop,search
+evt_029,usr_33421,book_4567,Kubernetes权威指南,云计算,page_view,/book/4567,203,2024-11-03 09:18:22,desktop,recommendation
+evt_030,usr_33421,book_4567,Kubernetes权威指南,云计算,add_to_cart,/book/4567,0,2024-11-03 09:21:35,desktop,recommendation
+evt_031,usr_42156,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,page_view,/book/9012,289,2024-11-03 10:32:18,mobile,homepage
+evt_032,usr_42156,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,purchase,/checkout,0,2024-11-03 10:37:07,mobile,homepage
+evt_033,usr_10523,book_7890,Spring Boot实战,Java,page_view,/book/7890,76,2024-11-03 11:55:41,desktop,search
+evt_034,usr_10523,book_8901,Python编程：从入门到实践（第2版）,Python,page_view,/book/8901,,2024-11-03 12:02:14,desktop,recommendation
+evt_035,usr_55234,book_2345,算法导论（第3版）,算法,page_view,/book/2345,134,2024-11-03 13:28:56,mobile,category_browse
+evt_036,usr_55234,book_3456,设计模式：可复用面向对象软件的基础,软件工程,page_view,/book/3456,211,2024-11-03 13:35:10,mobile,recommendation
+evt_037,usr_55234,book_3456,设计模式：可复用面向对象软件的基础,软件工程,add_to_cart,/book/3456,0,2024-11-03 13:38:21,mobile,recommendation
+evt_038,usr_78901,book_1234,代码大全（第2版）,软件工程,page_view,/book/1234,187,2024-11-03 15:10:33,desktop,homepage
+evt_039,usr_78901,book_5678,Redis设计与实现,数据库,page_view,/book/5678,92,2024-11-03 15:18:45,desktop,recommendation
+evt_040,usr_18294,book_6789,MySQL必知必会,数据库,page_view,/book/6789,145,2024-11-04 08:42:27,desktop,search
+evt_041,usr_18294,book_6789,MySQL必知必会,数据库,add_to_cart,/book/6789,0,2024-11-04 08:44:52,desktop,search
+evt_042,usr_67890,book_4567,Kubernetes权威指南,云计算,page_view,/book/4567,,2024-11-04 09:25:18,desktop,category_browse
+evt_043,usr_67890,book_7890,Spring Boot实战,Java,page_view,/book/7890,168,2024-11-04 09:33:41,desktop,recommendation
+evt_044,usr_67890,book_7890,Spring Boot实战,Java,purchase,/checkout,0,2024-11-04 09:36:55,desktop,recommendation
+evt_045,usr_25637,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,page_view,/book/9012,223,2024-11-04 10:50:12,mobile,homepage
+evt_046,usr_25637,book_9012,深度学习入门：基于Python的理论与实现,AI/机器学习,add_to_cart,/book/9012,0,2024-11-04 10:54:35,mobile,homepage
+evt_047,usr_33421,book_8901,Python编程：从入门到实践（第2版）,Python,page_view,/book/8901,109,2024-11-04 11:18:47,desktop,search
+evt_048,usr_33421,book_2345,算法导论（第3版）,算法,page_view,/book/2345,276,2024-11-04 11:25:33,desktop,recommendation
+evt_049,usr_33421,book_2345,算法导论（第3版）,算法,add_to_cart,/book/2345,0,2024-11-04 11:30:09,desktop,recommendation
+evt_050,usr_42156,book_3456,设计模式：可复用面向对象软件的基础,软件工程,page_view,/book/3456,198,2024-11-04 13:45:21,mobile,category_browse
